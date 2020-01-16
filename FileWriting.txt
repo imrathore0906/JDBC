@@ -1,0 +1,25 @@
+package javapractice;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class FileWriting {
+
+	public static void main(String[] args) {
+	File file = new File("D:\\FileWritingEx");  //have to include java.io.file
+    //file.mkdir();   //After running the program once for creating the file, mkdir can be commented
+	try {
+		FileOutputStream fos = new FileOutputStream("D:\\FileWritingEx\\ExampleCase");
+	    for(int i=65; i<91; i++){       //try-catch block is compulsory for file creation and manipulation
+	    	fos.write(i);
+	    	System.out.println(i);
+	    }fos.close();
+	} catch (IOException e) {     //FileNotFoundException has to be added for FileOutputStream creation but it is handled by IOException
+		e.printStackTrace();
+	}
+	
+	}
+
+}

@@ -1,0 +1,18 @@
+package javapractice;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class DateExample {
+
+	public static void main(String[] args) throws ParseException{
+		String dob = "28-01-19";
+		Date dt = new Date();
+		System.out.println(dt);
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yy");
+        dt = sdf.parse(dob);
+        System.out.println(dt);
+	}
+
+}

@@ -1,0 +1,23 @@
+package javapractice;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
+
+
+public class HashMapExample {
+	public static void main(String[] args) {
+		HashMap<String, Integer> phonebook = new HashMap<>();
+		phonebook.put("Shravya",48457);
+		phonebook.put("Shreyas",12345);
+		phonebook.put("Deloitte", 48457); //Value can be same for two diff keys
+		phonebook.put("Shravya", 43932); //Key if same, gets overwritten
+		System.out.println(phonebook);
+        System.out.println(phonebook.get("Shravya"));
+	    Set set = phonebook.entrySet(); //HashMap doesn't have an iterator so entrySet creates a set with same elements as in HashMap
+	    Iterator itr = set.iterator();
+	    while(itr.hasNext())
+	    	 System.out.println(itr.next());
+	}
+
+}
